@@ -1,0 +1,96 @@
+@import "_config.scss";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 18px;
+    font-family: 'Kumbh Sans', sans-serif;
+    background-color: $darkcyan;
+    background-image: 
+    url("../images/bg-pattern-top.svg"),
+    url("../images/bg-pattern-bottom.svg");
+    background-repeat: no-repeat;
+    background-position: 
+    // right calc(47vw + 15%) bottom calc(65vh - 15vw),
+    // left calc(40vw + 25%) top calc(72vh - 15vw);
+    right calc(50vw + 5%) bottom 45vh,
+    left calc(45vw + 5%) top 50vh;
+    // percentage starts when screen changes!
+    overflow-x: hidden;
+}
+h1,h2{
+    color: $verydarkdesaturatedblue;
+    font-weight: 700;
+    font-size: 1em;
+}
+p{
+    color: $darkgrayishblue;
+    font-weight: 400;
+}
+img{
+    max-width: 100%;
+}
+main{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: center;
+    padding: 0 1rem;
+}
+.card{
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+
+    &__img{
+        width: 110px;
+        border-radius: 50%;
+        margin-top: -60px;
+        border: 6px solid #fff;
+        background-color: #fff;
+        display: inline-block;
+
+        img{
+            border-radius: 50%;
+        }
+    }
+    &__user{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 0.5rem;
+        margin: 0.8rem 0 0.3rem;
+
+        &-age{
+            font-size: 1em;
+        }
+        &-location{
+            font-size: 0.75em;
+            margin-bottom: 1.5rem;
+        }
+    }
+    hr{
+        border: none;
+        background: $darkgray;
+        height: 1px;
+        opacity: 0.3;
+    }
+    .stats{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 20px 20px 25px;
+    }
+    .stat{
+
+        &__title{
+            font-size: 0.6125em;
+            letter-spacing: 1px;
+            margin-top: 0.3em;
+        }
+    }
+}
